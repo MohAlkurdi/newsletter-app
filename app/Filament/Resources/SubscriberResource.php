@@ -3,16 +3,11 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SubscriberResource\Pages;
-use App\Filament\Resources\SubscriberResource\RelationManagers;
 use App\Models\Subscriber;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SubscriberResource extends Resource
 {
@@ -64,5 +59,4 @@ class SubscriberResource extends Resource
     {
         return false;
     }
-
 }

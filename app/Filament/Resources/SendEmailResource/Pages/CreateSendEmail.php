@@ -6,7 +6,6 @@ use App\Filament\Resources\SendEmailResource;
 use App\Mail\Newsletter;
 use App\Models\SendEmail;
 use App\Models\Subscriber;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;

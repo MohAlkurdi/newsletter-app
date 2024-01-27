@@ -29,12 +29,12 @@ class SubscriberController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|unique:subscribers'
+            'email' => 'required|email|unique:subscribers',
         ]);
 
         Subscriber::create([
             'email' => $request->email,
-            'subscribed_at' => now('Asia/Riyadh')
+            'subscribed_at' => now('Asia/Riyadh'),
         ]);
 
         return redirect()->back()->with('success', 'You have subscribed successfully!');

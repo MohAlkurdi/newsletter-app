@@ -12,6 +12,6 @@ class SendEmail extends Model
     protected $fillable = [
         'subject',
         'body',
-        'sent_at'
+        'sent_at',
     ];
 }

@@ -12,6 +12,6 @@ class Subscriber extends Model
     protected $fillable = [
         'email',
         'subscribed_at',
-        'unsubscribed_at'
+        'unsubscribed_at',
     ];
 }
