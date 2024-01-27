@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('send_emails', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('subject')->nullable();
+            $table->string('subject');
             $table->string('body');
+            $table->timestamp('sent_at');
             $table->timestamps();
         });
     }

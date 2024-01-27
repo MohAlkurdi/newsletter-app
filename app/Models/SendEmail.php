@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SendEmail extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'subject',
+        'body',
+        'sent_at'
+    ];
 }
