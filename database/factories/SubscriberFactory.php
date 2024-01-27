@@ -17,7 +17,9 @@ class SubscriberFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'email' => fake()->unique()->safeEmail(),
+            'subscribed_at' => now('Asia/Riyadh'),
+            'unsubscribed_at' => null,
         ];
     }
 }
