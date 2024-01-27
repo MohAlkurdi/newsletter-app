@@ -47,7 +47,7 @@ class SendEmailResource extends Resource
                 TextColumn::make('sent_at')
                     ->date('F j, Y'),
 
-            ])
+            ])->defaultSort('id', 'desc')
             ->filters([])
             ->actions([
                 Tables\Actions\ViewAction::make(),
