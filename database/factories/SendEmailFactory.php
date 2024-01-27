@@ -17,7 +17,9 @@ class SendEmailFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'subject' => $this->faker->sentence(),
+            'body' => $this->faker->sentence(490),
+            'sent_at' => now('Asia/Riyadh'),
         ];
     }
 }
