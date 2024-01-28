@@ -67,3 +67,11 @@ You're ready to go! Visit
 
 Dashboard At
 `http://localhost:8000/admin/login`
+
+## Testing
+
+To run the tests for the application, you can use the following command:
+
+```sh
+./vendor/bin/pest
+```
