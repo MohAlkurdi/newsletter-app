@@ -18,6 +18,7 @@ class SubscriberFactory extends Factory
     {
         return [
             'email' => fake()->unique()->safeEmail(),
+            'unsubscribe_hash' => fake()->unique()->sha256(),
             'subscribed_at' => now('Asia/Riyadh'),
             'unsubscribed_at' => null,
         ];

@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\SendEmail;
+use App\Models\Subscriber;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
@@ -17,8 +18,10 @@ class Newsletter extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public SendEmail $sendEmail)
-    {
+    public function __construct(
+        public SendEmail $sendEmail,
+        public Subscriber $subscriber,
+    ) {
         //
     }
 
@@ -29,7 +32,7 @@ class Newsletter extends Mailable
     {
         return new Envelope(
             from: new Address('m@m.com', 'Moh Test'),
-            subject: SendEmail::first()->subject,
+            subject: SendEmail::find($this->sendEmail->id)->subject,
         );
     }
 

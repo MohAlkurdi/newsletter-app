@@ -14,16 +14,12 @@
 <body class="min-h-screen bg-gray-100">
     <div class="max-w-4xl py-36 mx-auto sm:py-36 lg:py-40">
         <div class="text-center">
-            <p class="mt-6 text-lg leading-8">
-                {!! $sendEmail->body !!}
+            <h1 class="mt-6">
+                You have successfully unsubscribed from our newsletter.
+            </h1>
+            <p>
+                We are sorry to see you go.
             </p>
         </div>
-        {{-- Unsubscribe --}}
-        <div class="mt-8 text-center">
-            <a href="{{ route('unsubscribe', [$subscriber->email, $subscriber->unsubscribe_hash]) }}" class="text-sm underline text-gray-600 hover:text-gray-500">
-                Unsubscribe
-            </a>
-        </div>
-    </div>
 </body>
 </html>

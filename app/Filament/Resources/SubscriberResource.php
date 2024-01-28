@@ -6,6 +6,7 @@ use App\Filament\Resources\SubscriberResource\Pages;
 use App\Models\Subscriber;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -28,13 +29,16 @@ class SubscriberResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('email')
-                    ->searchable()
-                    ->sortable(),
+                    ->searchable(),
 
                 TextColumn::make('subscribed_at')
                     ->date('F j, Y')
                     ->searchable()
                     ->sortable(),
+
+                IconColumn::make('unsubscribed_at')
+                    ->label('Unsubscribed')
+                    ->boolean(),
             ])
             ->filters([])
             ->actions([])

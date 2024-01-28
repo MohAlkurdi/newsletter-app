@@ -11,6 +11,7 @@ class Subscriber extends Model
 
     protected $fillable = [
         'email',
+        'unsubscribe_hash',
         'subscribed_at',
         'unsubscribed_at',
     ];
