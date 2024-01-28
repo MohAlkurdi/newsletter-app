@@ -15,7 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $welcome = App\Models\Greeting::find(1)->header;
+    $description = App\Models\Greeting::find(1)->description;
+    return view('welcome', [
+        'welcome' => $welcome,
+        'description' => $description,
+    ]);
 });
 
 // Subscribe to the newsletter route
