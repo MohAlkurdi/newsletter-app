@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('greetings', function (Blueprint $table) {
             $table->id();
-            $table->string('header')->default('Welcome to our newsletter!');
+            $table->string('header');
             $table->text('description')->nullable();
             $table->timestamps();
         });
