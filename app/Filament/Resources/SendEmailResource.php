@@ -85,4 +85,9 @@ class SendEmailResource extends Resource
         ]);
 
     }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return SendEmail::count();
+    }
 }

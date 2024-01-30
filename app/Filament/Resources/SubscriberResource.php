@@ -63,4 +63,9 @@ class SubscriberResource extends Resource
     {
         return false;
     }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return Subscriber::count();
+    }
 }

@@ -1,6 +1,6 @@
 <?php
+
 use App\Mail\Newsletter;
-use App\Models\SendEmail;
 use App\Models\Subscriber;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

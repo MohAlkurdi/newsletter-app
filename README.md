@@ -50,7 +50,7 @@ Run database seeder:
 php artisan db:seed
 ```
 
-Create filament user
+Create filament user (to access the dashboard)
 
 ```bash
 php artisan make:filament-user

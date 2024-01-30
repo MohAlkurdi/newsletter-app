@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $welcome = App\Models\Greeting::find(1)->header;
     $description = App\Models\Greeting::find(1)->description;
+
     return view('welcome', [
         'welcome' => $welcome,
         'description' => $description,
@@ -31,8 +32,8 @@ Route::get('/unsubscribe/{email}/{hash}', [SubscriberController::class, 'destroy
 
 // Test email template
 Route::get('/mailable', function () {
-    $email = App\Models\SendEmail::find(18);
-    $subscriber = App\Models\Subscriber::find(11);
+    $email = App\Models\SendEmail::find(1);
+    $subscriber = App\Models\Subscriber::find(1);
 
     return new App\Mail\Newsletter($email, $subscriber);
 });
